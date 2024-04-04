@@ -1,0 +1,15 @@
+---
+interface Props {
+  label: string;
+  href: string;
+}
+
+const { label, href } = Astro.props;
+---
+
+<a href={href} class="bg-cyan-600 px-3 rounded-md">
+  <span>
+    {label}
+    <span>&rarr;</span>
+  </span>
+</a>

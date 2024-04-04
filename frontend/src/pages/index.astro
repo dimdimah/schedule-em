@@ -1,0 +1,58 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Card from "@components/Card.astro";
+import Button from "@components/Button.astro";
+const response = await fetch("http://localhost:3211/");
+const datas = await response.json();
+console.log(datas);
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <div class="flex items-center justify-center gap-4 my-5">
+      <h1>Welcome to <span class="text-gradient">Astro</span></h1>
+      <Button href="/post" label="Postingan" />
+    </div>
+    <ul role="list" class="link-card-grid">
+      {
+        datas.getData.data.map(
+          (blog: { title: string; description: string }) => {
+            console.log(blog);
+            return (
+              <Card
+                href="https://astro.build/chat/"
+                title={blog.title}
+                body={blog.description}
+              />
+            );
+          }
+        )
+      }
+    </ul>
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 2rem;
+    padding: 0;
+  }
+</style>
