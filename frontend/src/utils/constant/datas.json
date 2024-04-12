@@ -1,0 +1,84 @@
+{
+  "getData": {
+    "error": null,
+    "data": [
+      {
+        "id_jadwal": 1,
+        "hari": "Senin",
+        "tanggal": "2024-04-01",
+        "matakuliah": [
+          {
+            "id_matakuliah": 1,
+            "id_jadwal": 1,
+            "dosen": "Pak Lilik",
+            "matkul": "Jaringan Lanjut",
+            "time": "08.00 - 09.50"
+          },
+          {
+            "id_matakuliah": 2,
+            "id_jadwal": 1,
+            "dosen": "Pak Lilik",
+            "matkul": "Jaringan Lanjut",
+            "time": "10.00 - 11.50"
+          }
+        ],
+        "asisten_matakuliah": [
+          {
+            "id_asisten_matakuliah": 1,
+            "id_jadwal": 1,
+            "dosen_asisten": "Pak Lilik",
+            "matkul_asisten": "Jaringan Lanjut",
+            "time_asisten": "08.00 - 09.50"
+          },
+          {
+            "id_asisten_matakuliah": 2,
+            "id_jadwal": 1,
+            "dosen_asisten": "Pak Lilik",
+            "matkul_asisten": "Jaringan Lanjut",
+            "time_asisten": "10.00 - 11.50"
+          }
+        ]
+      },
+      {
+        "id_jadwal": 2,
+        "hari": "Selasa",
+        "tanggal": "2024-04-02",
+        "matakuliah": [
+          {
+            "id_matakuliah": 3,
+            "id_jadwal": 2,
+            "dosen": "Pak Lilik",
+            "matkul": "Jaringan Lanjut",
+            "time": "08.00 - 09.50"
+          },
+          {
+            "id_matakuliah": 4,
+            "id_jadwal": 2,
+            "dosen": "Pak Lilik",
+            "matkul": "Jaringan Lanjut",
+            "time": "10.00 - 11.50"
+          }
+        ],
+        "asisten_matakuliah": [
+          {
+            "id_asisten_matakuliah": 3,
+            "id_jadwal": 2,
+            "dosen_asisten": "Pak Lilik",
+            "matkul_asisten": "Jaringan Lanjut",
+            "time_asisten": "08.00 - 09.50"
+          },
+          {
+            "id_asisten_matakuliah": 4,
+            "id_jadwal": 2,
+            "dosen_asisten": "Pak Lilik",
+            "matkul_asisten": "Jaringan Lanjut",
+            "time_asisten": "10.00 - 11.50"
+          }
+        ]
+      }
+    ],
+    "count": null,
+    "status": 200,
+    "statusText": "OK"
+  }
+}

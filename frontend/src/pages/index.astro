@@ -1,7 +1,10 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import Card from "@components/Card.astro";
+import CardTest from "@components/Card.test.astro";
 import Button from "@components/Button.astro";
+
+// Api Call
 const response = await fetch("http://localhost:3211/");
 const datas = await response.json();
 console.log(datas);
@@ -18,17 +21,17 @@ console.log(datas);
         datas.getData.data.map(
           (blog: { title: string; description: string }) => {
             console.log(blog);
-            return (
-              <Card
-                href="https://astro.build/chat/"
-                title={blog.title}
-                body={blog.description}
-              />
-            );
+            return <Card href="#" title={blog.title} body={blog.title} />;
           }
         )
       }
     </ul>
+    <div>
+      <CardTest
+        title="Judul ini"
+        content="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit tempora ipsam nobis asperiores est possimus rem enim numquam, quidem placeat beatae. Non, veritatis. Temporibus molestiae, eligendi ullam illum fugiat quia."
+      />
+    </div>
   </main>
 </Layout>
 

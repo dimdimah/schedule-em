@@ -17,6 +17,14 @@ app.get("/", async (request, response) => {
   response.json({ getData });
 });
 
+app.get("/api/jadwal", async (req, res) => {
+  const jadwal = await db.from("jadwal").select("*");
+  const kuliah = await db.from("jadwal").select("*");
+  const asisten = await db.from("jadwal").select("*");
+  const data = { jadwal, kuliah, asisten };
+  res.json(data);
+});
+
 app.post("/", async (request, response) => {
   const { title, description } = request.body;
   const createPost = await db.from("blog").insert({ title, description });
